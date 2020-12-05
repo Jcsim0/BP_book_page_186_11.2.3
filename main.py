@@ -42,7 +42,8 @@ def backward(f1_output, w2_T, fowward_):
 
     # f1_d = (1-(1/(1+np.exp(f1_output)))) * (1/(1+np.exp(f1_output)))
     f1_d = np.array([[ (1-f1_output[0, ])*f1_output[0, ], 0], [0, (1-f1_output[1, ])*f1_output[1, ]]])
-    print(f1_d)
+    result = np.dot(f1_d, w2_T, fowward_)
+    print(result)
 
 
 if __name__ == '__main__':
@@ -50,9 +51,9 @@ if __name__ == '__main__':
     a1 = np.array([[1]])
     b1 = np.array([[-0.48], [-0.13]])
 
-    w2 = [[0.09, -0.17]]
-    b2 = [[0.48]]
+    w2 = np.array([[0.09, -0.17]])
+    b2 = np.array([[0.48]])
 
     # print(f2(w2, f1(w1, a1, b1), b2))
     print(f1(w1, a1, b1))
-    backward(f1(w1, a1, b1), 0, 0)
+    backward(f1(w1, a1, b1), w2.T, forward(1.261))
