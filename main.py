@@ -1,10 +1,12 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Created with PyCharm
+@Auth Jcsim
+@Date 2020-12-9 20:10
+@File main.py
+@Description
+"""
 import random
 import matplotlib.pyplot as plt
 import numpy as np
